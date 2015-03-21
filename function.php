@@ -2,16 +2,32 @@
 
 <?php
 
-// PHP automatically fills an $argv 
+/*
+ * This file is an example of a function as a CLI.
+ * Type a command like `./function.php --firstWord foo --secondWord bar`
+ */
+
+echo "PHP automatically fills an \$argv from info on the command line.";
+print "\n\n";
 print_r($argv);
+print "\n\n";
 
-$params = getCliParams($argv);
-
+print "Here are the parameters parsed from \$argv.";
+print "\n\n";
+$params = parseArgv($argv);
 print_r($params);
+print "\n\n";
 
+print "Now we feed those parsed parameters to our function and voila!";
+print "\n\n";
 buildSentence($params);
+print "\n\n";
 
-function getCliParams($argv) {
+/*
+ * Functions
+ */
+
+function parseArgv($argv) {
   $params = array();
   foreach($argv as $i => $arg) {
     if (substr($arg, 0, 2) == '--') {
