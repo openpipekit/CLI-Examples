@@ -4,10 +4,10 @@
 
 /*
  * This file is an example of a function as a CLI.
- * Type a command like `./function.php --firstWord foo --secondWord bar`
+ * Type a command like `./cli.php --firstWord foo --secondWord bar`
  */
 
-echo "PHP automatically fills an \$argv from info on the command line.";
+print "PHP automatically fills an \$argv from info on the command line.";
 print "\n\n";
 print_r($argv);
 print "\n\n";
