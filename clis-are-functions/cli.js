@@ -13,13 +13,13 @@ process.stdout.write('\n\n')
 
 process.stdout.write('Here are the parameters parsed from argv.')
 process.stdout.write('\n\n')
-argv = parseArgv(process.argv)
-console.log(argv)
+params = parseArgv(process.argv)
+console.log(params)
 process.stdout.write('\n\n')
 
 process.stdout.write('Now we feed those parsed parameters to our function and voila!')
 process.stdout.write('\n\n')
-buildSentence(argv)
+buildSentence(params)
 process.stdout.write('\n\n')
 
 /*
@@ -43,6 +43,6 @@ function parseArgv(argv) {
   return params
 }
 
-function buildSentence(argv) {
-  process.stdout.write('The ' + argv['firstWord'] + ' is ' + argv['secondWord'] + '.')
+function buildSentence(params) {
+  process.stdout.write('The ' + params['firstWord'] + ' is ' + params['secondWord'] + '.')
 }
